@@ -22,8 +22,7 @@ public class Image {
     // Using the ManyToOne annotation to state that many images are mapped
     // to one user which allows for better organization
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+    @ManyToOne @JoinColumn(name = "user_id")
     private User user;
 
     public Image() {} // empty constructor just for organization
@@ -64,5 +63,13 @@ public class Image {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public User getUser() {
+        return null;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
